@@ -399,11 +399,11 @@ class ROSRobotInterfaceBase(object):
             return False
 
         # check and decide time
-        fastest_time = self.angle_vector_duration(
-            self.angle_vector(),
-            av,
-            controller_type)
-        time = self._check_time(time, fastest_time, time_scale=time_scale)
+        # fastest_time = self.angle_vector_duration(
+        #     self.angle_vector(),
+        #     av,
+        #     controller_type)
+        time = self._check_time(time, time, time_scale=time_scale)
 
         self.robot.angle_vector(av)
         cacts = self.controller_table[controller_type]
